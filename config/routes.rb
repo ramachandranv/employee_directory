@@ -1,4 +1,6 @@
 EmployeeDirectory::Application.routes.draw do
+  get "employees/index"
+
   devise_for :employees
 
   # The priority is based upon order of creation:
