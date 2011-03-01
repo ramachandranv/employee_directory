@@ -1,5 +1,14 @@
 EmployeeDirectory::Application.routes.draw do
-  get "employees/index"
+  
+  get "profiles/index"
+
+  get "profiles/new"
+
+  get "profiles/edit"
+
+  get "profiles/view"
+
+  root :to => "employees#index"
 
   devise_for :employees
 
