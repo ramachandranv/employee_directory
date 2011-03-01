@@ -1,12 +1,6 @@
 EmployeeDirectory::Application.routes.draw do
   
-  get "profiles/index"
-
-  get "profiles/new"
-
-  get "profiles/edit"
-
-  get "profiles/view"
+  resources :profiles
 
   root :to => "employees#index"
 

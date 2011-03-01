@@ -1,6 +1,10 @@
 class ProfilesController < ApplicationController
   def index
-   @profile = Profile.all
+   @profiles = Profile.all
+
+   respond_to do |format|
+     format.html
+   end
   end
 
   def new
@@ -16,7 +20,7 @@ class ProfilesController < ApplicationController
   end
 
   
-  def view
+  def show 
     @profile = Profile.find(params[:id])
 
     respond_to do |format|
